@@ -1,0 +1,26 @@
+{
+  "name": "nofacetouch",
+  "version": "1.0.0",
+  "description": "Project to reduce touching my face. I have enough acne as is.",
+  "dependencies": {
+    "@mediapipe/face_mesh": "^0.4.1633559619",
+    "@mediapipe/hands": "^0.4.1675469240"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysoo/nofacetouch.git"
+  },
+  "author": "Yi Xian Soo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysoo/nofacetouch/issues"
+  },
+  "homepage": "https://github.com/ysoo/nofacetouch#readme"
+}
