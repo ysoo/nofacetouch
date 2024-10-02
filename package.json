@@ -2,15 +2,9 @@
   "name": "nofacetouch",
   "version": "1.0.0",
   "description": "Project to reduce touching my face. I have enough acne as is.",
-  "dependencies": {
-    "@mediapipe/face_mesh": "^0.4.1633559619",
-    "@mediapipe/hands": "^0.4.1675469240"
-  },
-  "devDependencies": {
-    "typescript": "^5.6.2"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "build": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

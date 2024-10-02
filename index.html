@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MediaPipe Face and Hand Detection</title>
-  <style>
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-    }
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-    }
-  </style>
+  <title>Face Mesh Detection</title>
+  <!-- MediaPipe libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+  <script defer src="./src/index.js"></script> <!-- Your main JS file -->
 </head>
 <body>
-  <video id="videoElement" autoplay playsinline></video>
-  <canvas id="outputCanvas"></canvas>
-
-  <script src="./src/index.js"></script> <!-- Reference to compiled JS -->
+  <div class="container">
+    <!-- Video element for webcam feed -->
+    <video id="videoElement" autoplay playsinline></video>
+    <!-- Canvas to draw the face mesh -->
+    <canvas id="outputCanvas" width="1280" height="720"></canvas>
+  </div>
 </body>
 </html>
