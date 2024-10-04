@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Face Mesh Detection</title>
-  <!-- MediaPipe libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
-  <script defer src="./src/index.js"></script> <!-- Your main JS file -->
-</head>
-<body>
-  <div class="container">
-    <!-- Video element for webcam feed -->
-    <video id="videoElement" autoplay playsinline></video>
-    <!-- Canvas to draw the face mesh -->
-    <canvas id="outputCanvas" width="1280" height="720"></canvas>
-  </div>
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Face Mesh Detection</title>
+		<style>
+			/* Style for the touched text */
+			#touchText {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				font-size: 28px;
+				color: white;
+				display: none; /* Initially hidden */
+			}
+		</style>
+		<!-- MediaPipe libraries -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"
+			crossorigin="anonymous"
+		></script>
+		<script defer src="./src/index.js"></script>
+		<!-- Your main JS file -->
+	</head>
+	<body>
+		<div class="container">
+			<canvas id="outputCanvas" width="960" height="540"></canvas>
+			<video id="videoElement" autoplay playsinline></video>
+			<audio id="myAudio">
+				<source src="./oh-yeah.mp3" type="audio/mpeg" />
+			</audio>
+			<div id="touchText">Touched!</div>
+		</div>
+	</body>
 </html>
